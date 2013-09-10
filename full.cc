@@ -4,6 +4,7 @@ C++11 Notes for future development of C++ programs
 */
 int main()
 {
+    char character1 = 'a'; // can NOT be "a"
     
     int var1 = 0; // example var1 of type int
     
