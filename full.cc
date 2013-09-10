@@ -26,6 +26,12 @@ int main()
         return -1; // return error
     }
     
-    return 0; // return okay
+    // referenced variables change when their reference changes it's value
+    int &referenceVar = var1; // referencing var1
     
+    // pointers hold the address of an object
+    int *pointerVar = &var1; // pointerVar now holds the address of var1 but not the variable
+    int var2 = *pointerVar; // this is how we eval the pointerVar to get the value of the address it is pointing to.
+    
+    return 0; // return okay
 }
