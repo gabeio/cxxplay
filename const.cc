@@ -20,5 +20,13 @@ int main()
     bit = 2; // on source change
     std::cout << byte << std::endl; // reference changed also byte=2;
     
+    double bytes = 9; // source
+    const double *byter = &bytes; // constant pointer (always same memory location)
+    
+    free(&bytes); // causes error because byter is now pointing to wrong memory space.
+    
+    bytes=10; // obviously won't work (unless free(x) is commented out)
+    std::cout << *byter << std::endl;
+    
     return 0;
 }
